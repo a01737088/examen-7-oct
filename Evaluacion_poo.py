@@ -18,7 +18,11 @@ class Alojamiento:
 
     def precio_por_persona(self):
         # COMPLETAR
-        pass
+        # Revisa que el precio y la capacidad sean mayores a cero
+        if self.precio <= 0 or self.capacidad <= 0:
+            return None
+
+        return round(self.precio / self.capacidad, 2)
 
     # 2. precio_por_persona()
 
